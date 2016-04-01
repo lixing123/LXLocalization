@@ -7,19 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIButton+addLocalization.h"
-
-#define LANG(key) \
-[[MultiLang shareInstance] LocalizdString:(key)]
-
-#define LANGA(stringArr) \
-[[MultiLang shareInstance] LocalizdStringArr:(stringArr)]
-
-#define GETFILENAME(fileName) \
-[[MultiLang shareInstance] getPlistFileNameWithString:(fileName)]
-
-#define setLang(langType) \
-[[MultiLang shareInstance] setLang:(langType)]
+#import "LXLocalization.h"
 
 @interface ViewController ()
 
@@ -30,8 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 200, 30)];
-    label.text = LANG(@"welcome");
+    for (int i=0; i<1000; i++) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 10+i*30, 200, 30)];
+        [label LXL_SetTitleWithKey:@"welcome"];
+        [self.view addSubview:label];
+    }
+    
+    UIButton *changeLanguageButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    changeLanguageButton.frame = CGRectMake(50, 110, 200, 30);
+    [self.view addSubview:changeLanguageButton];
+    [changeLanguageButton setTitle:@"Change" forState:UIControlStateNormal];
+    [changeLanguageButton addTarget:self action:@selector(changeLanguage) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)changeLanguage {
+    [[LXLocalization sharedInstance] setLocalization:@"zh-Hant"];
 }
 
 - (void)didReceiveMemoryWarning {

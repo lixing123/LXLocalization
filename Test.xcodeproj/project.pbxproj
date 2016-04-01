@@ -13,8 +13,9 @@
 		8E5EC2511CAA903F0043CBB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5EC24F1CAA903F0043CBB5 /* Main.storyboard */; };
 		8E5EC2531CAA903F0043CBB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5EC2521CAA903F0043CBB5 /* Assets.xcassets */; };
 		8E5EC2561CAA903F0043CBB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5EC2541CAA903F0043CBB5 /* LaunchScreen.storyboard */; };
-		8E5EC25E1CAA910B0043CBB5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E5EC25D1CAA910B0043CBB5 /* Localizable.strings */; };
-		8ECEAE331CAD46830025AEFB /* UIButton+addLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEAE321CAD46830025AEFB /* UIButton+addLocalization.m */; };
+		8ECEAE331CAD46830025AEFB /* UILabel+addLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEAE321CAD46830025AEFB /* UILabel+addLocalization.m */; };
+		8ECEAE381CAE0A320025AEFB /* LXLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEAE371CAE0A320025AEFB /* LXLocalization.m */; };
+		8ECEAE441CAE10AC0025AEFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8ECEAE461CAE10AC0025AEFB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +29,17 @@
 		8E5EC2521CAA903F0043CBB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E5EC2551CAA903F0043CBB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5EC2571CAA903F0043CBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E5EC25D1CAA910B0043CBB5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		8ECEAE311CAD46830025AEFB /* UIButton+addLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+addLocalization.h"; sourceTree = "<group>"; };
-		8ECEAE321CAD46830025AEFB /* UIButton+addLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+addLocalization.m"; sourceTree = "<group>"; };
+		8ECEAE311CAD46830025AEFB /* UILabel+addLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+addLocalization.h"; sourceTree = "<group>"; };
+		8ECEAE321CAD46830025AEFB /* UILabel+addLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+addLocalization.m"; sourceTree = "<group>"; };
+		8ECEAE361CAE0A320025AEFB /* LXLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXLocalization.h; sourceTree = "<group>"; };
+		8ECEAE371CAE0A320025AEFB /* LXLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXLocalization.m; sourceTree = "<group>"; };
+		8ECEAE401CAE10850025AEFB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		8ECEAE411CAE10860025AEFB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8ECEAE421CAE108A0025AEFB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		8ECEAE431CAE108A0025AEFB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8ECEAE451CAE10AC0025AEFB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8ECEAE471CAE10B00025AEFB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8ECEAE481CAE10B10025AEFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +76,11 @@
 				8E5EC24A1CAA903F0043CBB5 /* AppDelegate.m */,
 				8E5EC24C1CAA903F0043CBB5 /* ViewController.h */,
 				8E5EC24D1CAA903F0043CBB5 /* ViewController.m */,
-				8ECEAE311CAD46830025AEFB /* UIButton+addLocalization.h */,
-				8ECEAE321CAD46830025AEFB /* UIButton+addLocalization.m */,
-				8E5EC25D1CAA910B0043CBB5 /* Localizable.strings */,
+				8ECEAE361CAE0A320025AEFB /* LXLocalization.h */,
+				8ECEAE371CAE0A320025AEFB /* LXLocalization.m */,
+				8ECEAE311CAD46830025AEFB /* UILabel+addLocalization.h */,
+				8ECEAE321CAD46830025AEFB /* UILabel+addLocalization.m */,
+				8ECEAE461CAE10AC0025AEFB /* Localizable.strings */,
 				8E5EC24F1CAA903F0043CBB5 /* Main.storyboard */,
 				8E5EC2521CAA903F0043CBB5 /* Assets.xcassets */,
 				8E5EC2541CAA903F0043CBB5 /* LaunchScreen.storyboard */,
@@ -118,6 +129,7 @@
 				TargetAttributes = {
 					8E5EC2421CAA903D0043CBB5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ANR2YRFV52;
 					};
 				};
 			};
@@ -128,6 +140,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 8E5EC23A1CAA903D0043CBB5;
 			productRefGroup = 8E5EC2441CAA903D0043CBB5 /* Products */;
@@ -145,7 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E5EC2561CAA903F0043CBB5 /* LaunchScreen.storyboard in Resources */,
-				8E5EC25E1CAA910B0043CBB5 /* Localizable.strings in Resources */,
+				8ECEAE441CAE10AC0025AEFB /* Localizable.strings in Resources */,
 				8E5EC2531CAA903F0043CBB5 /* Assets.xcassets in Resources */,
 				8E5EC2511CAA903F0043CBB5 /* Main.storyboard in Resources */,
 			);
@@ -158,8 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ECEAE331CAD46830025AEFB /* UIButton+addLocalization.m in Sources */,
+				8ECEAE331CAD46830025AEFB /* UILabel+addLocalization.m in Sources */,
 				8E5EC24E1CAA903F0043CBB5 /* ViewController.m in Sources */,
+				8ECEAE381CAE0A320025AEFB /* LXLocalization.m in Sources */,
 				8E5EC24B1CAA903F0043CBB5 /* AppDelegate.m in Sources */,
 				8E5EC2481CAA903F0043CBB5 /* main.m in Sources */,
 			);
@@ -172,6 +186,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				8E5EC2501CAA903F0043CBB5 /* Base */,
+				8ECEAE401CAE10850025AEFB /* zh-Hans */,
+				8ECEAE421CAE108A0025AEFB /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -180,8 +196,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				8E5EC2551CAA903F0043CBB5 /* Base */,
+				8ECEAE411CAE10860025AEFB /* zh-Hans */,
+				8ECEAE431CAE108A0025AEFB /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8ECEAE461CAE10AC0025AEFB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ECEAE451CAE10AC0025AEFB /* zh-Hans */,
+				8ECEAE471CAE10B00025AEFB /* zh-Hant */,
+				8ECEAE481CAE10B10025AEFB /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -273,10 +301,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lixing123.Test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixing123.LXLocalization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -284,10 +315,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lixing123.Test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixing123.LXLocalization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
