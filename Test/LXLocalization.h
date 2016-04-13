@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UILabel+addLocalization.h"
+#import "UIButton+addLocalization.h"
 
 @interface LXLocalization : NSObject
 
