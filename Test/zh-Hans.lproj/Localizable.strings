@@ -6,4 +6,6 @@
   Copyright © 2016年 lixing123.com. All rights reserved.
 */
 
-"welcome" = "欢迎光临!";
+"label"  = "这是一个label";
+"button" = "这是一个button";
+"change" = "改变";

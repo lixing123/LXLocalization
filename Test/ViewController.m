@@ -18,23 +18,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    for (int i=0; i<100; i++) {
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        button.frame = CGRectMake(50, 10+i*30, 200, 30);
-        [self.view addSubview:button];
-        [button LXL_SetTitleWithKey:@"welcome" forControlState:UIControlStateNormal];
-    }
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 30, 200, 30)];
+    label.textAlignment = NSTextAlignmentCenter;
+    [label LXL_SetTitleWithKey:@"label"];
+    [self.view addSubview:label];
     
-    UIButton *changeLanguageButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    changeLanguageButton.frame = CGRectMake(150, 110, 200, 30);
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.frame = CGRectMake(50, 80, 200, 30);
+    [self.view addSubview:button];
+    [button LXL_SetTitleWithKey:@"button" forControlState:UIControlStateNormal];
+    
+    UIButton *changeLanguageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    changeLanguageButton.frame = CGRectMake(250, 30, 100, 30);
     [self.view addSubview:changeLanguageButton];
-    [changeLanguageButton setTitle:@"Change" forState:UIControlStateNormal];
+    [changeLanguageButton LXL_SetTitleWithKey:@"change" forControlState:UIControlStateNormal];
     [changeLanguageButton addTarget:self action:@selector(changeLanguage) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)changeLanguage {
-    [[LXLocalization sharedInstance] setLocalization:@"zh-Hant"];
+    if ([[[LXLocalization sharedInstance] localization] isEqualToString:@"zh-Hans"]) {
+        [[LXLocalization sharedInstance] setLocalization:@"zh-Hant"];
+    }else if ([[[LXLocalization sharedInstance] localization] isEqualToString:@"zh-Hant"]) {
+        [[LXLocalization sharedInstance] setLocalization:@"en"];
+    }else {
+        [[LXLocalization sharedInstance] setLocalization:@"zh-Hans"];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

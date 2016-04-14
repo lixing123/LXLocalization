@@ -19,7 +19,7 @@ static LXLocalization *instance;
 + (id)sharedInstance {
     if (!instance) {
         instance = [[LXLocalization alloc] init];
-        instance.localization = @"zh-Hans";//默认为简体中文
+        instance.localization = @"zh-Hans";//default is simplified Chinese
     }
     return instance;
 }
