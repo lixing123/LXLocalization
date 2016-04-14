@@ -36,14 +36,24 @@
 }
 
 - (void) updateTitleForAllControlState {
-    for (NSString *controlStateString in self.dict) {
-        NSString *titleKey = self.dict[controlStateString];
-        NSString *path = [[NSBundle mainBundle] pathForResource:[[LXLocalization sharedInstance] localization] ofType:@"lproj"];
-        NSBundle *languageBundle = [NSBundle bundleWithPath:path];
-        NSString *string = [languageBundle localizedStringForKey:titleKey value:@"" table:nil];
-        UIControlState controlState = (UIControlState)controlStateString.intValue;
-        [self setTitle:string forState:controlState];
-    }
+    //TODO:find an elegant way
+    [self updateTitleForControlState:UIControlStateNormal];
+    [self updateTitleForControlState:UIControlStateFocused];
+    [self updateTitleForControlState:UIControlStateDisabled];
+    [self updateTitleForControlState:UIControlStateReserved];
+    [self updateTitleForControlState:UIControlStateSelected];
+    [self updateTitleForControlState:UIControlStateApplication];
+    [self updateTitleForControlState:UIControlStateHighlighted];
+}
+
+- (void)updateTitleForControlState:(UIControlState)controlState {
+    NSString *controlStateString = [NSString stringWithFormat:@"%lu",(unsigned long)@(controlState)];
+    NSString *titleKey = self.dict[controlStateString];
+    NSString *path = [[NSBundle mainBundle] pathForResource:[[LXLocalization sharedInstance] localization] ofType:@"lproj"];
+    NSBundle *languageBundle = [NSBundle bundleWithPath:path];
+    NSString *string = [languageBundle localizedStringForKey:titleKey value:@"" table:nil];
+    
+    [self setTitle:string forState:controlState];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {

@@ -19,18 +19,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     for (int i=0; i<100; i++) {
-//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 10+i*30, 200, 30)];
-//        [label LXL_SetTitleWithKey:@"welcome"];
-//        [self.view addSubview:label];
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        button.frame = CGRectMake(50, 10+i+30, 200, 30);
-        [button setTitle:@"welcome" forState:UIControlStateNormal];
-        //[button LXL_SetTitleWithKey:@"welcome" forControlState:UIControlStateNormal];
+        button.frame = CGRectMake(50, 10+i*30, 200, 30);
+        [self.view addSubview:button];
+        [button LXL_SetTitleWithKey:@"welcome" forControlState:UIControlStateNormal];
     }
     
     UIButton *changeLanguageButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    changeLanguageButton.frame = CGRectMake(50, 110, 200, 30);
+    changeLanguageButton.frame = CGRectMake(150, 110, 200, 30);
     [self.view addSubview:changeLanguageButton];
     [changeLanguageButton setTitle:@"Change" forState:UIControlStateNormal];
     [changeLanguageButton addTarget:self action:@selector(changeLanguage) forControlEvents:UIControlEventTouchUpInside];
