@@ -10,6 +10,6 @@
 
 @interface UILabel (addLocalization)
 
-- (void)LXL_SetTitleWithKey:(NSString *)title;
+- (void)LXL_SetTextWithKey:(NSString *)titleKey;
 
 @end

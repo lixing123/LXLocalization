@@ -8,4 +8,5 @@
 
 "label"  = "this is a label";
 "button" = "this is a button";
+"textField" = "this is a text field";
 "change" = "Change";

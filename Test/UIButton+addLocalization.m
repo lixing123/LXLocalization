@@ -7,7 +7,7 @@
 //
 
 #import "UIButton+addLocalization.h"
-#import "UIView+addLocalization.h"
+#import "NSObject+addLocalization.h"
 #import "LXLocalization.h"
 
 @interface UIButton ()
@@ -61,6 +61,8 @@
         [self updateTitleForAllControlState];
     }
 }
+
+#pragma mark - add property dict
 
 static const void *dict = &dict;
 

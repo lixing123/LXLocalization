@@ -8,4 +8,5 @@
 
 "label"  = "这是一个label";
 "button" = "这是一个button";
+"textField" = "这是一个text field";
 "change" = "改变";

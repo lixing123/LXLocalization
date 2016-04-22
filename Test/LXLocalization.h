@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "UILabel+addLocalization.h"
 #import "UIButton+addLocalization.h"
+#import "UITextField+addLocalization.h"
 
 @interface LXLocalization : NSObject
 

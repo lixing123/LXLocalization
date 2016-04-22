@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E47F6951CCA20F20046DD1A /* UITextField+addLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E47F6941CCA20F20046DD1A /* UITextField+addLocalization.m */; };
+		8E47F6981CCA29E00046DD1A /* NSObject+addLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E47F6971CCA29E00046DD1A /* NSObject+addLocalization.m */; };
 		8E5EC2481CAA903F0043CBB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5EC2471CAA903F0043CBB5 /* main.m */; };
 		8E5EC24B1CAA903F0043CBB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5EC24A1CAA903F0043CBB5 /* AppDelegate.m */; };
 		8E5EC24E1CAA903F0043CBB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5EC24D1CAA903F0043CBB5 /* ViewController.m */; };
@@ -17,10 +19,13 @@
 		8ECEAE381CAE0A320025AEFB /* LXLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEAE371CAE0A320025AEFB /* LXLocalization.m */; };
 		8ECEAE441CAE10AC0025AEFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8ECEAE461CAE10AC0025AEFB /* Localizable.strings */; };
 		8ECEAE4B1CAE21F90025AEFB /* UIButton+addLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEAE4A1CAE21F90025AEFB /* UIButton+addLocalization.m */; };
-		8ECEAE4E1CAE22280025AEFB /* UIView+addLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEAE4D1CAE22280025AEFB /* UIView+addLocalization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E47F6931CCA20F20046DD1A /* UITextField+addLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+addLocalization.h"; sourceTree = "<group>"; };
+		8E47F6941CCA20F20046DD1A /* UITextField+addLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+addLocalization.m"; sourceTree = "<group>"; };
+		8E47F6961CCA29E00046DD1A /* NSObject+addLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+addLocalization.h"; sourceTree = "<group>"; };
+		8E47F6971CCA29E00046DD1A /* NSObject+addLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+addLocalization.m"; sourceTree = "<group>"; };
 		8E5EC2431CAA903D0043CBB5 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5EC2471CAA903F0043CBB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E5EC2491CAA903F0043CBB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,8 +49,6 @@
 		8ECEAE481CAE10B10025AEFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8ECEAE491CAE21F90025AEFB /* UIButton+addLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+addLocalization.h"; sourceTree = "<group>"; };
 		8ECEAE4A1CAE21F90025AEFB /* UIButton+addLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+addLocalization.m"; sourceTree = "<group>"; };
-		8ECEAE4C1CAE22280025AEFB /* UIView+addLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+addLocalization.h"; sourceTree = "<group>"; };
-		8ECEAE4D1CAE22280025AEFB /* UIView+addLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+addLocalization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +87,14 @@
 				8E5EC24D1CAA903F0043CBB5 /* ViewController.m */,
 				8ECEAE361CAE0A320025AEFB /* LXLocalization.h */,
 				8ECEAE371CAE0A320025AEFB /* LXLocalization.m */,
-				8ECEAE4C1CAE22280025AEFB /* UIView+addLocalization.h */,
-				8ECEAE4D1CAE22280025AEFB /* UIView+addLocalization.m */,
+				8E47F6961CCA29E00046DD1A /* NSObject+addLocalization.h */,
+				8E47F6971CCA29E00046DD1A /* NSObject+addLocalization.m */,
 				8ECEAE311CAD46830025AEFB /* UILabel+addLocalization.h */,
 				8ECEAE321CAD46830025AEFB /* UILabel+addLocalization.m */,
 				8ECEAE491CAE21F90025AEFB /* UIButton+addLocalization.h */,
 				8ECEAE4A1CAE21F90025AEFB /* UIButton+addLocalization.m */,
+				8E47F6931CCA20F20046DD1A /* UITextField+addLocalization.h */,
+				8E47F6941CCA20F20046DD1A /* UITextField+addLocalization.m */,
 				8ECEAE461CAE10AC0025AEFB /* Localizable.strings */,
 				8E5EC24F1CAA903F0043CBB5 /* Main.storyboard */,
 				8E5EC2521CAA903F0043CBB5 /* Assets.xcassets */,
@@ -185,9 +190,10 @@
 				8E5EC24E1CAA903F0043CBB5 /* ViewController.m in Sources */,
 				8ECEAE381CAE0A320025AEFB /* LXLocalization.m in Sources */,
 				8E5EC24B1CAA903F0043CBB5 /* AppDelegate.m in Sources */,
-				8ECEAE4E1CAE22280025AEFB /* UIView+addLocalization.m in Sources */,
+				8E47F6951CCA20F20046DD1A /* UITextField+addLocalization.m in Sources */,
 				8ECEAE4B1CAE21F90025AEFB /* UIButton+addLocalization.m in Sources */,
 				8E5EC2481CAA903F0043CBB5 /* main.m in Sources */,
+				8E47F6981CCA29E00046DD1A /* NSObject+addLocalization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
